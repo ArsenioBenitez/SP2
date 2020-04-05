@@ -18,7 +18,7 @@ public class BPClient {
 		String host = (args.length < 1) ? null : args[0];
         try {
             Registry registry = LocateRegistry.getRegistry(host);
-            MyRemote stub = (MyRemote) registry.lookup("MyRemote");
+            MyRemote stub = (MyRemote) registry.lookup("rmi://localhost//MyRemote");
             String response = stub.login();
             System.out.println("response: " + response);
         } catch (Exception e) {
