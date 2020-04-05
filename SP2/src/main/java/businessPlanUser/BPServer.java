@@ -4,13 +4,12 @@ import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-import java.rmi.server.UnicastRemoteObject;
 
-public class BPServer extends UnicastRemoteObject implements MyRemote {
+
+public class BPServer implements MyRemote {
 	
-	public BPServer() throws RemoteException{}
+	public BPServer() throws RemoteException{
+		super();}
 	
 	public String login()
 	{
@@ -24,6 +23,7 @@ public class BPServer extends UnicastRemoteObject implements MyRemote {
 // Bind the remote object's stub in the registry
 	        Registry registry = LocateRegistry.getRegistry();
 	        registry.bind("MyRemote", stub);
+	        System.out.print("Server Up and running");
 		}catch (Exception e) {
 			System.err.println("Server exception: " + e.toString());
             e.printStackTrace();
