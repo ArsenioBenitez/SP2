@@ -10,7 +10,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 public class BPServer extends UnicastRemoteObject implements MyRemote {
 	
-	public BPServer() {}
+	public BPServer() throws RemoteException{}
 	
 	public String login()
 	{
