@@ -16,19 +16,19 @@ public class BusinessPlanUser {
 		this.is_admin = is_admin;
 	}
 	public String getName() {
-		return name;
+		return this.name;
 	}
 	
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 	
 	public String getDepartment() {
-		return department;
+		return this.department;
 	}
 	
 	public boolean isIs_admin() {
-		return is_admin;
+		return this.is_admin;
 	}
 	public void setIs_admin(boolean is_admin) {
 		this.is_admin = is_admin;
